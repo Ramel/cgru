@@ -9,11 +9,11 @@ For /F "Tokens=*" %%I in ('dir /b "%AE_SEARCH%*"') Do set "AE_LOCATION=%%I"
 
 set "AE_LOCATION=%ADOBE_LOCATION%\%AE_LOCATION%\Support Files"
 
-set APP_DIR=%AE_LOCATION%
-set APP_EXE=%AE_LOCATION%\aerender.exe
+set "APP_DIR=%AE_LOCATION%"
+set "APP_EXE=%AE_LOCATION%\aerender.exe"
 
 rem Define location:
-set locate_file=%CGRU_LOCATION%\software_setup\locate_afterfx.cmd
+set "locate_file=%CGRU_LOCATION%\software_setup\locate_afterfx.cmd"
 if exist %locate_file% call %locate_file%
 
-set AE_LOCATION=%APP_DIR%
+set "AE_LOCATION=%APP_DIR%"

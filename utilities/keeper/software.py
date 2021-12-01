@@ -160,8 +160,8 @@ def locateSoftware(soft):
     if sys.platform.find('win') == 0:
         setup_file += '.cmd'
         lines[0] = 'rem ' + lines[0]
-        lines.append('set APP_DIR=%s' % app_dir)
-        lines.append('set APP_EXE=%%APP_DIR%%\\%s' % app_exe)
+        lines.append('set "APP_DIR=%s"' % app_dir)
+        lines.append('set "APP_EXE=%%APP_DIR%%\\%s"' % app_exe)
     else:
         setup_file += '.sh'
         lines[0] = '# ' + lines[0]
